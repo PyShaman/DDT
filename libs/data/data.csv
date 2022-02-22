@@ -1,0 +1,5 @@
+first_name, last_name, phone, cc_name, cc_address, cc_zip, cc_number, cc_exp, cc_cvv
+John1, Doe1, +48 665-778-111, John Doe 1, Secret 1, 64-111, 4916981102414485, 01/11, 111
+John2, Doe2, +48 665-778-222, John Doe 2, Secret 2, 64-222, 4929563524610349, 02/22, 222
+John3, Doe3, +48 665-778-333, John Doe 3, Secret 3, 64-333, 375171031014166, 03/33, 333
+John4, Doe4, +48 665-778-444, John Doe 4, Secret 4, 64-444, 6387317915618621, 04/44, 444
