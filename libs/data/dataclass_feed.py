@@ -10,9 +10,9 @@ class DataclassFeed1:
     cc_name: str = field(default="John Doe 1")
     cc_address: str = field(default="Secret 1")
     cc_zip: str = field(default="64-111")
-    cc_number: str = field(default="4916981102414485")
+    cc_number: int = field(default=4916981102414485)
     cc_exp: str = field(default="01/11")
-    cc_cvv: str = field(default="111")
+    cc_cvv: int = field(default=111)
 
     def return_data_1(self):
         return asdict(self)
@@ -27,9 +27,9 @@ class DataclassFeed2:
     cc_name: str = field(default="John Doe 2")
     cc_address: str = field(default="Secret 2")
     cc_zip: str = field(default="64-222")
-    cc_number: str = field(default="4929563524610349")
+    cc_number: int = field(default=4929563524610349)
     cc_exp: str = field(default="02/22")
-    cc_cvv: str = field(default="222")
+    cc_cvv: int = field(default=222)
 
     def return_data_2(self):
         return asdict(self)
@@ -44,9 +44,9 @@ class DataclassFeed3:
     cc_name: str = field(default="John Doe 3")
     cc_address: str = field(default="Secret 3")
     cc_zip: str = field(default="64-333")
-    cc_number: str = field(default="375171031014166")
+    cc_number: int = field(default=375171031014166)
     cc_exp: str = field(default="03/33")
-    cc_cvv: str = field(default="333")
+    cc_cvv: int = field(default=333)
 
     def return_data_3(self):
         return asdict(self)
@@ -61,9 +61,9 @@ class DataclassFeed4:
     cc_name: str = field(default="John Doe 4")
     cc_address: str = field(default="Secret 4")
     cc_zip: str = field(default="64-444")
-    cc_number: str = field(default="6387317915618621")
+    cc_number: int = field(default=6387317915618621)
     cc_exp: str = field(default="04/44")
-    cc_cvv: str = field(default="444")
+    cc_cvv: int = field(default=444)
 
     def return_data_4(self):
         return asdict(self)

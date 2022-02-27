@@ -12,7 +12,7 @@ from libs.data.data_feed import DataClass
                              DataClass.dict_4,
                          ],
                          indirect=True)
-class TestClass:
+class TestDataFeed:
 
     def test_01_use_values(self, data):
         print(f"User: {data['first_name']} {data['last_name']}")
