@@ -1,5 +1,6 @@
 import unittest
 
+from assertpy import assert_that, soft_assertions
 from ddt import data, ddt, unpack
 
 from libs.data.data_csv_feed import CSVFeed
@@ -23,3 +24,13 @@ class TestCSV(unittest.TestCase):
         cc_exp: {h}
         cc_cvv: {i}
         """)
+        with soft_assertions():
+            assert_that(a).is_instance_of(str)
+            assert_that(b).is_instance_of(str)
+            assert_that(c).is_instance_of(str)
+            assert_that(d).is_instance_of(str)
+            assert_that(e).is_instance_of(str)
+            assert_that(f).is_instance_of(str)
+            assert_that(g).is_instance_of(str)
+            assert_that(h).is_instance_of(str)
+            assert_that(i).is_instance_of(str)
