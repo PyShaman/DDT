@@ -1,11 +1,26 @@
+import allure
 import pytest
+
+from allure_commons.types import AttachmentType
 from assertpy import assert_that, soft_assertions
 
 
+@allure.description("""
+APPS-XXXX 'When data for tests are provided with dataclass then we can check the proper type of data'
+
+Test scenario:
+1. Create dataclasses that provides proper dictionary with data
+2. Create proper pytest fixtures to serve the data to the test
+3. Update conftest.py file to let pytest have access to fixtures
+4. Run tests with different set of data provided by dataclasses
+5. verify results
+""")
+@allure.testcase("https://locust.io", 'APPS-XXXX')
 @pytest.mark.usefixtures("dc_1", "dc_2", "dc_3", "dc_4")
 class TestDataclassFeed:
 
     def test_01_check_dataclass_1_dict(self, dc_1):
+        allure.attach(str(dc_1), name="dict_1", attachment_type=AttachmentType.JSON)
         with soft_assertions():
             assert_that(dc_1["first_name"]).contains("John 1")
             assert_that(dc_1["last_name"]).contains("Doe 1")
@@ -18,6 +33,7 @@ class TestDataclassFeed:
             assert_that(dc_1["cc_cvv"]).is_equal_to(111)
 
     def test_01_check_dataclass_2_dict(self, dc_2):
+        allure.attach(str(dc_2), name="dict_2", attachment_type=AttachmentType.JSON)
         with soft_assertions():
             assert_that(dc_2["first_name"]).contains("John 2")
             assert_that(dc_2["last_name"]).contains("Doe 2")
@@ -30,6 +46,7 @@ class TestDataclassFeed:
             assert_that(dc_2["cc_cvv"]).is_equal_to(222)
 
     def test_01_check_dataclass_3_dict(self, dc_3):
+        allure.attach(str(dc_3), name="dict_3", attachment_type=AttachmentType.JSON)
         with soft_assertions():
             assert_that(dc_3["first_name"]).contains("John 3")
             assert_that(dc_3["last_name"]).contains("Doe 3")
@@ -42,6 +59,7 @@ class TestDataclassFeed:
             assert_that(dc_3["cc_cvv"]).is_equal_to(333)
 
     def test_01_check_dataclass_4_dict(self, dc_4):
+        allure.attach(str(dc_4), name="dict_4", attachment_type=AttachmentType.JSON)
         with soft_assertions():
             assert_that(dc_4["first_name"]).contains("John 4")
             assert_that(dc_4["last_name"]).contains("Doe 4")
